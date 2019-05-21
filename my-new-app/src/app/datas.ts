@@ -1,8 +1,7 @@
 export class Datas {
   constructor(
-id: number,
-name: string,
-children: object,
-parent_id: number,
+    public id: number,
+    public name: string,
+    public children: object,
   ){}
 }

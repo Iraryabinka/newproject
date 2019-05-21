@@ -1,6 +1,7 @@
-import { Component, AfterViewInit} from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {Datas} from './datas'
 import * as L from 'leaflet';
+import { Identifiers} from '@angular/compiler';
 
 @Component({
     selector: 'app-root',
@@ -14,11 +15,13 @@ export class AppComponent implements AfterViewInit {
     public myColor = "blue";
     public activeArray = [];
 
-    datas: Datas[] =  [
+
+   datas: Datas[] =  [
+
   {
     id: 1,
-  name: 'Parent 1',
-  children: [
+    name: 'Parent 1',
+   children: [
       {
      name: 'Child 1',
     parent_id: 1,
@@ -57,10 +60,10 @@ export class AppComponent implements AfterViewInit {
     ];
 
     addItemToActive(id){
-    return this.activeArray = this.datas.filter(data => data.id === id)
-
-    //return this.activeArray.push(this.datas.[i] === [i])
+     return this.activeArray = this.datas.filter(data => data.id === id)
+    
     }
+
 
     ngAfterViewInit() {
 
