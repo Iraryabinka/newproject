@@ -1,0 +1,24 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div class="container_component">
+
+      <button (click) ="isShown = false" class="button" > DATA - </button>
+      <button (click) ="isShown = true" class="button"> DATA + </button>
+
+    <ul *ngIf ="isShown" (click) ="addMarkToActive(); ngAfterViewInit() " [style.color]="myColor" class="data_list_component">
+    <ul  *ngFor="let item of datas" >{{item.name}}
+      <li   *ngFor="let children of item.children" >{{children.name}}</li>
+    </ul>
+  </ul>
+
+    <ul (click) ="isShown = false" class="active_list_component">ACTIVE: {{activeArray}} </ul>
+
+  </div>
+
+  <div id="mapid">map</div>
+
+</div>
+
+
