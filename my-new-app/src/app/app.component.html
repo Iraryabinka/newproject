@@ -8,7 +8,7 @@
       <button (click) ="isShown = true" class="button"> DATA + </button>
 
     <ul *ngIf ="isShown"  class="data_list_component">
-    <ul  *ngFor="let item of datas" (click) ="addItemToActive()" >{{item.name}}
+    <ul  *ngFor="let item of datas" (click) ="addItemToActive(item.id)" >{{item.name}}
       <li   *ngFor="let children of item.children" >{{children.name}}</li>
     </ul>
   </ul>

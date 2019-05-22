@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit {
     public title = 'My test App for Internship';
     public isShown = true;
     public myColor = "blue";
-    public activeArray = [];
+    public activeArray;
 
 
    datas: Datas[] =  [
@@ -60,8 +60,7 @@ export class AppComponent implements AfterViewInit {
     ];
 
     addItemToActive(id){
-     return this.activeArray = this.datas.filter(data => data.id === id)
-    
+     return this.activeArray = this.datas.filter(item => item.id === id);
     }
 
 
